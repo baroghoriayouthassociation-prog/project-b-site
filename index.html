@@ -1,1 +1,199 @@
-<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Project B — Bangla Digital Utility</title><meta name="description" content="AI, career, digital skills এবং everyday online কাজের জন্য সহজ বাংলা guides ও free tools।"><link rel="stylesheet" href="style.css"></head><body><header class="site-header"><div class="container nav"><a class="brand" href="#">Project B</a><nav><a href="#tools">Tools</a><a href="#guides">Guides</a><a href="#about">About</a></nav></div></header><main><section class="hero container"><p class="eyebrow">বাংলা Digital Utility Platform</p><h1>দরকারি কাজ, সহজে।</h1><p class="hero-text">AI, career, digital skills এবং everyday online কাজের জন্য সহজ বাংলা guides ও free tools।</p><a class="button" href="#tools">Free Tools দেখুন</a></section><section id="tools" class="section container"><div class="section-heading"><p class="eyebrow">Free Tools</p><h2>ছোট কিন্তু useful tools</h2><p>প্রথম tool এখনই কাজ করছে। বাকিগুলো ধাপে ধাপে যোগ হবে।</p></div><div class="tool-grid"><article class="tool-card featured"><span class="badge">LIVE</span><h3>Age Calculator</h3><p>জন্মতারিখ থেকে আপনার বয়স কত বছর, মাস ও দিন—সহজে হিসাব করুন।</p><form id="ageForm" class="calculator"><label for="birthDate">জন্মতারিখ</label><input id="birthDate" type="date" required><button class="button" type="submit">বয়স হিসাব করুন</button></form><div id="ageResult" class="result" aria-live="polite"></div></article><article class="tool-card"><h3>Percentage Calculator</h3><p>Percentage দ্রুত হিসাব করুন।</p><span class="coming">Coming soon</span></article><article class="tool-card"><h3>GPA / CGPA Calculator</h3><p>Studentদের জন্য সহজ GPA/CGPA হিসাব।</p><span class="coming">Coming soon</span></article><article class="tool-card"><h3>Discount Calculator</h3><p>Discount-এর পর দাম কত হবে?</p><span class="coming">Coming soon</span></article><article class="tool-card"><h3>Unit Converter</h3><p>Common unit conversion এক জায়গায়।</p><span class="coming">Coming soon</span></article><article class="tool-card"><h3>AI Prompt Generator</h3><p>কাজ অনুযায়ী useful prompt তৈরি করুন।</p><span class="coming">Coming soon</span></article></div></section><section id="guides" class="section container"><div class="section-heading"><p class="eyebrow">Bangla Guides</p><h2>শিখুন, তারপর কাজে লাগান</h2></div><div class="guide-grid"><article class="guide-card"><h3>ChatGPT কীভাবে ব্যবহার করবেন</h3><p>Beginnerদের জন্য practical guide।</p></article><article class="guide-card"><h3>ATS CV কী?</h3><p>Job application-এর আগে কী জানা দরকার।</p></article><article class="guide-card"><h3>Students-এর জন্য AI</h3><p>পড়াশোনা ও productivity-তে AI-এর ব্যবহার।</p></article><article class="guide-card"><h3>Freelancing শুরু করার আগে</h3><p>কোন skill আগে শেখা উচিত—একটি practical roadmap।</p></article></div></section><section id="about" class="section container about"><p class="eyebrow">Project B কী?</p><h2>Real problem → simple tool → useful content</h2><p>এটি একটি Bangla-first digital utility platform-এর MVP। প্রথম লক্ষ্য হলো real users-এর real problems solve করা—তারপর data দেখে কোন tools, guides ও services-এ বেশি focus করা হবে তা ঠিক করা।</p></section></main><footer class="footer"><div class="container">© 2026 Project B — MVP</div></footer><script>const form=document.getElementById('ageForm'),input=document.getElementById('birthDate'),result=document.getElementById('ageResult');const t=new Date();input.max=new Date(t.getTime()-t.getTimezoneOffset()*60000).toISOString().split('T')[0];function calculateAge(b,n){let y=n.getFullYear()-b.getFullYear(),m=n.getMonth()-b.getMonth(),d=n.getDate()-b.getDate();if(d<0){m--;d+=new Date(n.getFullYear(),n.getMonth(),0).getDate()}if(m<0){y--;m+=12}return{y,m,d}}form.addEventListener('submit',e=>{e.preventDefault();const [y,m,d]=input.value.split('-').map(Number),b=new Date(y,m-1,d),n=new Date();if(b>n){result.innerHTML='<p class="error">ভবিষ্যতের তারিখ দেওয়া যাবে না।</p>';return}const a=calculateAge(b,n);result.innerHTML=`<div class="result-box"><p>আপনার বয়স</p><strong>${a.y} বছর ${a.m} মাস ${a.d} দিন</strong><small>আজকের তারিখ অনুযায়ী হিসাব করা হয়েছে।</small></div>`});</script></body></html>
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project B — Bangla Digital Utility</title>
+<meta name="description" content="AI, career, digital skills এবং everyday online কাজের জন্য সহজ বাংলা free tools ও guides।">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Project B</div>
+  <nav>
+    <a href="#tools">Tools</a><a href="#career">Career</a><a href="#guides">Guides</a><a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <p class="eyebrow">বাংলা DIGITAL UTILITY PLATFORM</p>
+  <h1>দরকারি কাজ, সহজে।</h1>
+  <p>AI, career, digital skills এবং everyday online কাজের জন্য সহজ বাংলা guides ও free tools।</p>
+  <a class="button" href="#tools">Free Tools দেখুন</a>
+</section>
+
+<section id="tools" class="section">
+  <p class="eyebrow">FREE TOOLS</p>
+  <h2>ছোট কিন্তু useful tools</h2>
+  <p class="muted">প্রথম ১০টি tool এখন একসাথে দেওয়া হলো।</p>
+
+  <div class="grid">
+    <article class="card tool-card wide">
+      <span class="badge">LIVE</span><h3>Age Calculator</h3>
+      <p>জন্মতারিখ থেকে আপনার বয়স বছর, মাস ও দিন হিসেবে হিসাব করুন।</p>
+      <label>জন্মতারিখ<input id="birthDate" type="date"></label>
+      <button onclick="ageCalc()">বয়স হিসাব করুন</button><div id="ageOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>Percentage Calculator</h3><p>শতকরা হিসাব সহজে করুন।</p>
+      <label>কত শতাংশ? <input id="pct" type="number" placeholder="20"></label>
+      <label>কোন সংখ্যার? <input id="pctBase" type="number" placeholder="500"></label>
+      <button onclick="percentageCalc()">হিসাব করুন</button><div id="pctOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>GPA / CGPA Calculator</h3><p>Credit ও grade point দিয়ে weighted CGPA হিসাব করুন।</p>
+      <div id="gradeRows">
+        <div class="row"><input class="credit" type="number" step="0.5" placeholder="Credit"><input class="gp" type="number" step="0.01" placeholder="Grade point"></div>
+        <div class="row"><input class="credit" type="number" step="0.5" placeholder="Credit"><input class="gp" type="number" step="0.01" placeholder="Grade point"></div>
+        <div class="row"><input class="credit" type="number" step="0.5" placeholder="Credit"><input class="gp" type="number" step="0.01" placeholder="Grade point"></div>
+      </div>
+      <button class="secondary" onclick="addGradeRow()">+ আরও subject</button>
+      <button onclick="cgpaCalc()">CGPA হিসাব করুন</button><div id="cgpaOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>Salary Calculator</h3><p>মাসিক gross, allowance ও deduction থেকে আনুমানিক net salary দেখুন।</p>
+      <label>Gross salary <input id="gross" type="number" placeholder="30000"></label>
+      <label>Allowance <input id="allowance" type="number" placeholder="5000"></label>
+      <label>Deduction <input id="deduction" type="number" placeholder="2000"></label>
+      <button onclick="salaryCalc()">Net salary</button><div id="salaryOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>Unit Converter</h3><p>Length, weight ও temperature convert করুন।</p>
+      <select id="unitType" onchange="loadUnits()"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option></select>
+      <div class="row"><input id="unitValue" type="number" placeholder="Value"><select id="unitFrom"></select></div>
+      <select id="unitTo"></select>
+      <button onclick="unitCalc()">Convert</button><div id="unitOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>Discount Calculator</h3><p>Discount-এর পর কত টাকা দিতে হবে?</p>
+      <label>Original price <input id="price" type="number" placeholder="1000"></label>
+      <label>Discount % <input id="discount" type="number" placeholder="15"></label>
+      <button onclick="discountCalc()">হিসাব করুন</button><div id="discountOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>EMI / Loan Calculator</h3><p>Loan amount, interest ও সময় দিয়ে আনুমানিক EMI হিসাব করুন।</p>
+      <label>Loan amount <input id="loan" type="number" placeholder="500000"></label>
+      <label>Annual interest % <input id="interest" type="number" step="0.01" placeholder="10"></label>
+      <label>Months <input id="months" type="number" placeholder="60"></label>
+      <button onclick="emiCalc()">EMI হিসাব করুন</button><div id="emiOut" class="result"></div>
+    </article>
+  </div>
+</section>
+
+<section id="career" class="section">
+  <p class="eyebrow">AI + CAREER</p>
+  <h2>কাজ ও career-এর জন্য useful tools</h2>
+  <div class="grid">
+    <article class="card tool-card">
+      <h3>AI Prompt Generator</h3><p>নিজের কাজ অনুযায়ী reusable prompt তৈরি করুন।</p>
+      <label>কাজের ধরন<select id="promptTask"><option>পড়াশোনা</option><option>CV লেখা</option><option>ইন্টারভিউ প্রস্তুতি</option><option>কনটেন্ট লেখা</option><option>গবেষণা</option></select></label>
+      <label>বিষয়<input id="promptTopic" placeholder="যেমন: Digital Marketing"></label>
+      <label>ভাষা<select id="promptLang"><option>বাংলা</option><option>English</option></select></label>
+      <button onclick="promptGen()">Prompt তৈরি করুন</button><div id="promptOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>CV Summary Generator</h3><p>তথ্য দিয়ে একটি editable professional summary তৈরি করুন।</p>
+      <label>নাম<input id="cvName" placeholder="আপনার নাম"></label>
+      <label>Job title<input id="cvTitle" placeholder="যেমন: Junior Accountant"></label>
+      <label>Experience<input id="cvExp" placeholder="যেমন: 2 years"></label>
+      <label>Skills<input id="cvSkills" placeholder="Excel, Communication, Tally"></label>
+      <button onclick="cvGen()">Summary তৈরি করুন</button><div id="cvOut" class="result"></div>
+    </article>
+
+    <article class="card tool-card">
+      <h3>Cover Letter Generator</h3><p>চাকরির আবেদনের জন্য editable cover letter template তৈরি করুন।</p>
+      <label>নাম<input id="clName" placeholder="আপনার নাম"></label>
+      <label>Job title<input id="clTitle" placeholder="যেমন: Sales Executive"></label>
+      <label>Company<input id="clCompany" placeholder="Company name"></label>
+      <label>Skills<input id="clSkills" placeholder="Communication, Sales"></label>
+      <button onclick="coverGen()">Cover Letter তৈরি করুন</button><div id="clOut" class="result"></div>
+    </article>
+  </div>
+</section>
+
+<section id="guides" class="section">
+  <p class="eyebrow">BANGLA GUIDES</p><h2>শিখুন, তারপর কাজে লাগান</h2>
+  <div class="grid guides">
+    <article class="card"><h3>ChatGPT কীভাবে ব্যবহার করবেন</h3><p>Beginner-এর জন্য practical guide।</p></article>
+    <article class="card"><h3>ATS CV কী?</h3><p>Job application-এর আগে যা জানা দরকার।</p></article>
+    <article class="card"><h3>Students-এর জন্য AI</h3><p>পড়াশোনা ও productivity-তে AI-এর ব্যবহার।</p></article>
+    <article class="card"><h3>Freelancing শুরু করার আগে</h3><p>কোন skill আগে শেখা উচিত—একটি practical roadmap।</p></article>
+  </div>
+</section>
+
+<section id="about" class="section about">
+  <p class="eyebrow">PROJECT B কী?</p>
+  <h2>Real problem → simple tool → useful content</h2>
+  <p>এটি একটি Bangla-first digital utility platform-এর MVP। লক্ষ্য হলো real users-এর real problems solve করা—তারপর data দেখে tools, guides ও services-এর scope বাড়ানো।</p>
+</section>
+</main>
+
+<footer>© 2026 Project B — MVP</footer>
+
+<script>
+function n(id){return parseFloat(document.getElementById(id).value)||0}
+function money(x){return new Intl.NumberFormat('en-US',{maximumFractionDigits:2}).format(x)}
+function ageCalc(){
+ const v=document.getElementById('birthDate').value, out=document.getElementById('ageOut');
+ if(!v){out.textContent='জন্মতারিখ দিন।';return}
+ const b=new Date(v+'T00:00:00'), now=new Date();
+ if(b>now){out.textContent='ভবিষ্যতের তারিখ দেওয়া যাবে না।';return}
+ let y=now.getFullYear()-b.getFullYear(), m=now.getMonth()-b.getMonth(), d=now.getDate()-b.getDate();
+ if(d<0){m--; d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}
+ if(m<0){y--;m+=12}
+ out.innerHTML='<strong>'+y+' বছর '+m+' মাস '+d+' দিন</strong><small>আজকের তারিখ অনুযায়ী আনুমানিক হিসাব।</small>'
+}
+function percentageCalc(){
+ const p=n('pct'), b=n('pctBase'); document.getElementById('pctOut').innerHTML=b?'<strong>'+money(b*p/100)+'</strong>':'দুটি সংখ্যা দিন।'
+}
+function addGradeRow(){
+ const r=document.createElement('div');r.className='row';r.innerHTML='<input class="credit" type="number" step="0.5" placeholder="Credit"><input class="gp" type="number" step="0.01" placeholder="Grade point">';document.getElementById('gradeRows').appendChild(r)
+}
+function cgpaCalc(){
+ const cs=[...document.querySelectorAll('.credit')], gs=[...document.querySelectorAll('.gp')];let total=0,weighted=0;
+ cs.forEach((x,i)=>{let c=parseFloat(x.value),g=parseFloat(gs[i].value);if(c>0&&g>=0){total+=c;weighted+=c*g}})
+ document.getElementById('cgpaOut').innerHTML=total?'<strong>CGPA: '+(weighted/total).toFixed(2)+'</strong>':'Credit ও grade point দিন।'
+}
+function salaryCalc(){let g=n('gross'),a=n('allowance'),d=n('deduction');document.getElementById('salaryOut').innerHTML='<strong>Net: '+money(g+a-d)+'</strong><small>এটি simple estimate; tax/other rules ধরা হয়নি।</small>'}
+function loadUnits(){
+ const t=document.getElementById('unitType').value, sets={length:['m','cm','km','in','ft'],weight:['kg','g','lb'],temp:['C','F']};let s=sets[t];
+ ['unitFrom','unitTo'].forEach(id=>{document.getElementById(id).innerHTML=s.map(x=>'<option>'+x+'</option>').join('')})
+}
+function unitCalc(){
+ const v=n('unitValue'),f=document.getElementById('unitFrom').value,t=document.getElementById('unitTo').value,type=document.getElementById('unitType').value;let r=v;
+ if(type==='length'){let a={m:1,cm:.01,km:1000,in:.0254,ft:.3048};r=v*a[f]/a[t]}
+ if(type==='weight'){let a={kg:1,g:.001,lb:.45359237};r=v*a[f]/a[t]}
+ if(type==='temp'){if(f===t)r=v;else if(f==='C'&&t==='F')r=v*9/5+32;else r=(v-32)*5/9}
+ document.getElementById('unitOut').innerHTML='<strong>'+money(r)+' '+t+'</strong>'
+}
+function discountCalc(){let p=n('price'),d=n('discount'),save=p*d/100;document.getElementById('discountOut').innerHTML='<strong>Final price: '+money(p-save)+'</strong><small>আপনার সাশ্রয়: '+money(save)+'</small>'}
+function emiCalc(){
+ let P=n('loan'), annual=n('interest'), months=n('months'), r=annual/100/12;
+ if(P<=0||months<=0){document.getElementById('emiOut').textContent='Loan ও months দিন।';return}
+ let emi=r===0?P/months:P*r*Math.pow(1+r,months)/(Math.pow(1+r,months)-1),total=emi*months;
+ document.getElementById('emiOut').innerHTML='<strong>Monthly EMI: '+money(emi)+'</strong><small>Total payment: '+money(total)+' · Total interest: '+money(total-P)+'</small>'
+}
+function promptGen(){
+ let task=document.getElementById('promptTask').value,topic=document.getElementById('promptTopic').value||'[বিষয়]',lang=document.getElementById('promptLang').value;
+ document.getElementById('promptOut').textContent='You are a helpful expert. '+task+' বিষয়ে "'+topic+'" নিয়ে '+lang+' ভাষায় একটি clear, practical এবং beginner-friendly উত্তর তৈরি করুন। প্রয়োজন হলে step-by-step example দিন এবং ভুল তথ্য এড়িয়ে চলুন।'
+}
+function cvGen(){
+ let name=document.getElementById('cvName').value||'[Name]',title=document.getElementById('cvTitle').value||'[Job Title]',exp=document.getElementById('cvExp').value||'[Experience]',skills=document.getElementById('cvSkills').value||'[Skills]';
+ document.getElementById('cvOut').textContent=name+' is a '+title+' with '+exp+' of experience, with skills in '+skills+'. A motivated professional focused on delivering accurate, practical results and contributing effectively to a team.'
+}
+function coverGen(){
+ let name=document.getElementById('clName').value||'[Name]',title=document.getElementById('clTitle').value||'[Job Title]',company=document.getElementById('clCompany').value||'[Company]',skills=document.getElementById('clSkills').value||'[Skills]';
+ document.getElementById('clOut').textContent='Dear Hiring Manager at '+company+',\\n\\nI am writing to apply for the '+title+' position. I am interested in this opportunity and believe my skills in '+skills+' can help me contribute to your team. I would welcome the opportunity to discuss how my experience and skills match the role.\\n\\nThank you for your consideration.\\n\\nSincerely,\\n'+name
+}
+loadUnits();
+</script>
+</body>
+</html>
