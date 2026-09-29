@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://baroghoriayouthassociation-prog.github.io/project-b-site/sitemap.xml
