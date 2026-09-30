@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPA / CGPA Calculator বাংলা — Free Online Tool | Project B</title>
+<meta name="description" content="বাংলায় GPA ও CGPA হিসাব করুন। Credit ও grade point দিয়ে weighted CGPA calculator ব্যবহার করুন—সহজ, দ্রুত ও বিনামূল্যে।">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://baroghoriayouthassociation-prog.github.io/project-b-site/gpa-calculator.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">Project B</div>
+  <nav>
+    <a href="index.html#tools">Tools</a><a href="guides.html">Guides</a><a href="index.html#about">About</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero compact-hero">
+  <p class="eyebrow">FREE GPA / CGPA CALCULATOR</p>
+  <h1>বাংলায় GPA / CGPA Calculator</h1>
+  <p>প্রতিটি subject-এর credit ও grade point দিয়ে weighted GPA/CGPA সহজে হিসাব করুন।</p>
+</section>
+
+<section class="section single-tool-section">
+  <div class="card tool-card featured-tool" id="gpa-calculator">
+    <span class="badge">FREE TOOL</span>
+    <h2>GPA / CGPA Calculator</h2>
+    <p>প্রতিটি subject-এর credit এবং grade point লিখুন। প্রয়োজনে আরও subject যোগ করে মোট weighted CGPA হিসাব করুন।</p>
+    <div id="gradeRows">
+      <div class="row"><input class="credit" type="number" step="0.5" min="0" placeholder="Credit"><input class="gp" type="number" step="0.01" min="0" placeholder="Grade point"></div>
+      <div class="row"><input class="credit" type="number" step="0.5" min="0" placeholder="Credit"><input class="gp" type="number" step="0.01" min="0" placeholder="Grade point"></div>
+      <div class="row"><input class="credit" type="number" step="0.5" min="0" placeholder="Credit"><input class="gp" type="number" step="0.01" min="0" placeholder="Grade point"></div>
+    </div>
+    <div class="button-row">
+      <button class="secondary" onclick="addGradeRow()">+ আরও subject</button>
+      <button onclick="cgpaCalc()">CGPA হিসাব করুন</button>
+    </div>
+    <div id="cgpaOut" class="result"></div>
+  </div>
+</section>
+
+<section class="section article-section">
+  <article class="card content-card">
+    <p class="eyebrow">GUIDE</p>
+    <h2>CGPA কীভাবে হিসাব হয়?</h2>
+    <p>Weighted CGPA বের করার সাধারণ পদ্ধতিতে প্রতিটি subject-এর <strong>credit × grade point</strong> হিসাব করা হয়। সব subject-এর এই মান যোগ করে মোট credit দিয়ে ভাগ করলে weighted CGPA পাওয়া যায়।</p>
+    <p><strong>Formula:</strong> CGPA = Σ(Credit × Grade Point) ÷ Σ(Credit)</p>
+    <p>উদাহরণ হিসেবে, একটি 3-credit subject-এ grade point 3.50 এবং একটি 4-credit subject-এ grade point 3.00 হলে weighted average হবে:</p>
+    <p>(3 × 3.50 + 4 × 3.00) ÷ (3 + 4) = 3.21</p>
+    <p>আপনার প্রতিষ্ঠান যদি আলাদা grading rule, rounding rule বা semester GPA calculation method ব্যবহার করে, তাহলে official academic rules-কে final reference হিসেবে ধরুন। এই toolটি standard weighted calculation দেখায়।</p>
+  </article>
+</section>
+
+<section class="section faq-section">
+  <div class="section-heading">
+    <p class="eyebrow">FAQ</p>
+    <h2>GPA / CGPA নিয়ে সাধারণ প্রশ্ন</h2>
+  </div>
+  <div class="grid faq-grid">
+    <article class="card"><h3>GPA আর CGPA-এর পার্থক্য কী?</h3><p>GPA সাধারণত একটি নির্দিষ্ট semester বা term-এর grade point average বোঝায়। CGPA একাধিক course বা semester-এর cumulative average বোঝাতে ব্যবহৃত হয়। প্রতিষ্ঠানের সংজ্ঞা ভিন্ন হতে পারে।</p></article>
+    <article class="card"><h3>Credit বেশি হলে কী প্রভাব পড়ে?</h3><p>Weighted calculation-এ বেশি credit-এর subject-এর grade point মোট average-এ বেশি প্রভাব ফেলে। তাই শুধু grade point-এর simple average না করে credit বিবেচনা করা দরকার।</p></article>
+    <article class="card"><h3>Grade point কোথা থেকে পাব?</h3><p>আপনার result, transcript বা প্রতিষ্ঠানের grading scale থেকে grade point নিন। Letter grade-কে নিজে থেকে অন্য scale-এ convert করার আগে আপনার প্রতিষ্ঠানের official scale যাচাই করুন।</p></article>
+    <article class="card"><h3>এই calculator কি official result?</h3><p>না। এটি একটি calculation utility। Admission, scholarship বা academic record-এর জন্য আপনার institution-এর official transcript বা result-ই final source।</p></article>
+  </div>
+</section>
+
+<section class="section related-section">
+  <div class="card content-card">
+    <h2>আরও দরকারি Tools ও Guides</h2>
+    <p><a href="index.html#tools">সব Free Tools দেখুন →</a></p>
+    <p><a href="guides.html">বাংলা Guides দেখুন →</a></p>
+    <p><a href="guides-phase2.html">আরও ১০টি Guide দেখুন →</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <p>© Project B — Bangla Digital Utility</p>
+</footer>
+
+<script>
+function addGradeRow(){
+  const r=document.createElement('div');
+  r.className='row';
+  r.innerHTML='<input class="credit" type="number" step="0.5" min="0" placeholder="Credit"><input class="gp" type="number" step="0.01" min="0" placeholder="Grade point">';
+  document.getElementById('gradeRows').appendChild(r);
+}
+function cgpaCalc(){
+  const cs=[...document.querySelectorAll('.credit')], gs=[...document.querySelectorAll('.gp')];
+  let total=0,weighted=0;
+  cs.forEach((x,i)=>{
+    const c=parseFloat(x.value), g=parseFloat(gs[i].value);
+    if(c>0 && g>=0){total+=c;weighted+=c*g;}
+  });
+  document.getElementById('cgpaOut').innerHTML=total
+    ? '<strong>CGPA: '+(weighted/total).toFixed(2)+'</strong><small>Total credit: '+total+'</small>'
+    : 'Credit ও grade point দিন।';
+}
+</script>
+</body>
+</html>
