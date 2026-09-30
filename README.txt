@@ -1,24 +1,25 @@
-PROJECT B — FINAL CONTENT/SEO UPDATE
+PROJECT B — MODERN UI UPDATE
 
-Replace these 3 files in the GitHub repository (main/root):
+What changed
+- Rebuilt the visual design with a modern SaaS-style UI.
+- Added responsive mobile layout.
+- Added modern navigation, hero section, cards, form controls, buttons, results and guide styling.
+- Applied the same visual system to guides.html and guides-phase2.html.
+- Preserved existing tool JavaScript, tool IDs, guides, canonical URLs, GA4 tag and internal links.
+- Removed the stray literal \\n from the Phase 2 link area in index.html.
+
+Files to upload/replace in the GitHub Pages repo
 1. index.html
-2. guides.html
-3. guides-phase2.html
+2. style.css (NEW)
+3. guides.html
+4. guides-phase2.html
 
-What is fixed:
-- guides-phase2.html canonical URL added
-- Phase 2 navigation now includes Home, Guides, Tools
-- All 10 Phase 2 guides expanded to roughly 300–400 words
-- All 10 Phase 2 guides link to a relevant tool
-- Google Search guide now contains all 10 promised techniques
-- Online Safety guide now contains all 10 promised rules
-- guides.html now links to Phase 2
-- Existing guides.html guides now have relevant tool links
-- Homepage now links to Phase 2
-- Homepage tool cards have stable anchors so guide-to-tool links open the relevant tool card
+Do NOT delete sitemap.xml, robots.txt, Google verification file, or other existing files.
+Do NOT repeatedly request indexing after publishing. Let Search Console recrawl the updated pages.
 
-Important:
-- Do not replace the existing sitemap.xml; it is already correct.
-- Do not delete or replace the JavaScript inside index.html. This package preserves the existing index.html and only adds anchor IDs/linking.
-- After committing, open the live site and test a few guide-to-tool links.
-- Do not repeatedly request indexing. Let Google recrawl after the content update.
+After upload
+1. Confirm GitHub Pages deployment is green.
+2. Open the live homepage on mobile and desktop.
+3. Test Age Calculator, Percentage, GPA/CGPA, Salary, Unit Converter, Discount, EMI, Prompt, CV Summary and Cover Letter.
+4. Open Guides and Phase 2 Guides and test a few tool links.
+5. Keep the sitemap unchanged.
