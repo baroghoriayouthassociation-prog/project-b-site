@@ -1,15 +1,6 @@
 <!doctype html>
 <html lang="bn">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BR21LED9G9"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-BR21LED9G9');
-</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Project B — Bangla Digital Utility</title>
@@ -40,21 +31,21 @@ gtag('config', 'G-BR21LED9G9');
   <p class="muted">প্রথম ১০টি tool এখন একসাথে দেওয়া হলো।</p>
 
   <div class="grid">
-    <article class="card tool-card wide">
+    <article class="card tool-card wide" id="age-calculator">
       <span class="badge">LIVE</span><h3>Age Calculator</h3>
       <p>জন্মতারিখ থেকে আপনার বয়স বছর, মাস ও দিন হিসেবে হিসাব করুন।</p>
       <label>জন্মতারিখ<input id="birthDate" type="date"></label>
       <button onclick="ageCalc()">বয়স হিসাব করুন</button><div id="ageOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="percentage-calculator">
       <h3>Percentage Calculator</h3><p>শতকরা হিসাব সহজে করুন।</p>
       <label>কত শতাংশ? <input id="pct" type="number" placeholder="20"></label>
       <label>কোন সংখ্যার? <input id="pctBase" type="number" placeholder="500"></label>
       <button onclick="percentageCalc()">হিসাব করুন</button><div id="pctOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="gpa-calculator">
       <h3>GPA / CGPA Calculator</h3><p>Credit ও grade point দিয়ে weighted CGPA হিসাব করুন।</p>
       <div id="gradeRows">
         <div class="row"><input class="credit" type="number" step="0.5" placeholder="Credit"><input class="gp" type="number" step="0.01" placeholder="Grade point"></div>
@@ -65,7 +56,7 @@ gtag('config', 'G-BR21LED9G9');
       <button onclick="cgpaCalc()">CGPA হিসাব করুন</button><div id="cgpaOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="salary-calculator">
       <h3>Salary Calculator</h3><p>মাসিক gross, allowance ও deduction থেকে আনুমানিক net salary দেখুন।</p>
       <label>Gross salary <input id="gross" type="number" placeholder="30000"></label>
       <label>Allowance <input id="allowance" type="number" placeholder="5000"></label>
@@ -73,7 +64,7 @@ gtag('config', 'G-BR21LED9G9');
       <button onclick="salaryCalc()">Net salary</button><div id="salaryOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="unit-converter">
       <h3>Unit Converter</h3><p>Length, weight ও temperature convert করুন।</p>
       <select id="unitType" onchange="loadUnits()"><option value="length">Length</option><option value="weight">Weight</option><option value="temp">Temperature</option></select>
       <div class="row"><input id="unitValue" type="number" placeholder="Value"><select id="unitFrom"></select></div>
@@ -81,14 +72,14 @@ gtag('config', 'G-BR21LED9G9');
       <button onclick="unitCalc()">Convert</button><div id="unitOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="discount-calculator">
       <h3>Discount Calculator</h3><p>Discount-এর পর কত টাকা দিতে হবে?</p>
       <label>Original price <input id="price" type="number" placeholder="1000"></label>
       <label>Discount % <input id="discount" type="number" placeholder="15"></label>
       <button onclick="discountCalc()">হিসাব করুন</button><div id="discountOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="emi-calculator">
       <h3>EMI / Loan Calculator</h3><p>Loan amount, interest ও সময় দিয়ে আনুমানিক EMI হিসাব করুন।</p>
       <label>Loan amount <input id="loan" type="number" placeholder="500000"></label>
       <label>Annual interest % <input id="interest" type="number" step="0.01" placeholder="10"></label>
@@ -102,7 +93,7 @@ gtag('config', 'G-BR21LED9G9');
   <p class="eyebrow">AI + CAREER</p>
   <h2>কাজ ও career-এর জন্য useful tools</h2>
   <div class="grid">
-    <article class="card tool-card">
+    <article class="card tool-card" id="prompt-generator">
       <h3>AI Prompt Generator</h3><p>নিজের কাজ অনুযায়ী reusable prompt তৈরি করুন।</p>
       <label>কাজের ধরন<select id="promptTask"><option>পড়াশোনা</option><option>CV লেখা</option><option>ইন্টারভিউ প্রস্তুতি</option><option>কনটেন্ট লেখা</option><option>গবেষণা</option></select></label>
       <label>বিষয়<input id="promptTopic" placeholder="যেমন: Digital Marketing"></label>
@@ -110,7 +101,7 @@ gtag('config', 'G-BR21LED9G9');
       <button onclick="promptGen()">Prompt তৈরি করুন</button><div id="promptOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="cv-summary-generator">
       <h3>CV Summary Generator</h3><p>তথ্য দিয়ে একটি editable professional summary তৈরি করুন।</p>
       <label>নাম<input id="cvName" placeholder="আপনার নাম"></label>
       <label>Job title<input id="cvTitle" placeholder="যেমন: Junior Accountant"></label>
@@ -119,7 +110,7 @@ gtag('config', 'G-BR21LED9G9');
       <button onclick="cvGen()">Summary তৈরি করুন</button><div id="cvOut" class="result"></div>
     </article>
 
-    <article class="card tool-card">
+    <article class="card tool-card" id="cover-letter-generator">
       <h3>Cover Letter Generator</h3><p>চাকরির আবেদনের জন্য editable cover letter template তৈরি করুন।</p>
       <label>নাম<input id="clName" placeholder="আপনার নাম"></label>
       <label>Job title<input id="clTitle" placeholder="যেমন: Sales Executive"></label>
@@ -138,7 +129,7 @@ gtag('config', 'G-BR21LED9G9');
     <a class="card" href="guides.html#students-ai"><h3>Students-এর জন্য AI</h3><p>পড়াশোনা ও productivity-তে AI-এর ব্যবহার।</p></a>
     <a class="card" href="guides.html#freelancing"><h3>Freelancing শুরু করার আগে</h3><p>কোন skill আগে শেখা উচিত—একটি practical roadmap।</p></a>
   </div>
-  <p><a class="button" href="guides.html">সব Guides দেখুন →</a></p>
+  <p><a class="button" href="guides.html">সব Guides দেখুন →</a></p>\n  <p><a href="guides-phase2.html">আরও ১০টি Guide দেখুন (GPA, Job Scam, Email, Study Plan…) →</a></p>
 </section>
 
 <section id="about" class="section about">
